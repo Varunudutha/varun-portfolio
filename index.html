@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Varun Udutha | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #0f0f1a;
+  color: white;
+  scroll-behavior: smooth;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d0d1c;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav .logo {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+nav .logo span {
+  color: red;
+}
+nav .logo:hover {
+  text-shadow: 0 0 10px red, 0 0 20px red;
+  transform: scale(1.05);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+nav ul li a:hover {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+section {
+  padding: 60px 20px;
+  transition: 0.3s ease-in-out;
+}
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background-color: red;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about, .education, .experience, .skills, .achievements, .projects, .contact {
+  max-width: 1000px;
+  margin: auto;
+}
+.about-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.about-text {
+  max-width: 700px;
+  margin: 20px;
+}
+
+/* 🎯 Animation styles added below */
+.animated-about {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.about-text h1 span {
+  color: red;
+  text-shadow: 0 0 8px red;
+}
+.about-text p {
+  line-height: 1.7;
+  color: #ccc;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.skills-grid div {
+  background-color: #1a1a2e;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skills-grid div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px red;
+}
+.btn-contact {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+.btn-contact:hover {
+  background-color: white;
+  color: red;
+  box-shadow: 0 0 15px red;
+}
+a {
+  transition: color 0.3s, text-shadow 0.3s;
+}
+a:hover {
+  text-shadow: 0 0 10px red;
+}
+ul li {
+  margin: 10px 0;
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Portfo<span>lio</span></div>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Animated About Section -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <div class="about-text animated-about">
+        <h1>About Me<br><span>Hi, My name is Varun Udutha</span></h1>
+        <p>
+          I am a passionate B.Tech Final Year Student at MREC College, specializing in Computer Science and Engineering with IoT.
+          I love turning ideas into reality through code, and I enjoy building user-friendly full stack web applications.<br><br>
+          As a Full Stack Developer, I bring clean, efficient code and aesthetic design together. I’m also a problem solver who enjoys working on challenging real-world projects.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="education">
+    <h2 class="section-title">Education</h2>
+    <p><strong>B.E in Computer Science and Engineering (IoT)</strong><br>Malla Reddy Engineering College (MREC), CGPA: 8.59</p>
+    <p><strong>Intermediate</strong><br>Sri Vijaya Sai Junior College, Bodhan, Marks: 931/1000</p>
+    <p><strong>SSC</strong><br>Telangana State Model School, Nagireddypet, CGPA: 8.3</p>
+  </section>
+
+  <section id="experience" class="experience">
+    <h2 class="section-title">Experience</h2>
+    <p><strong>Position:</strong> Junior Developer</p>
+    <p><strong>Company:</strong> Skilltimate Technologies</p>
+    <p><strong>Duration:</strong> 05/2023</p>
+    <p><strong>Description:</strong> Developed and optimized web applications using HTML, CSS, JavaScript, Node.js, and MongoDB. Worked on frontend design, backend integration, and performance debugging.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div>HTML</div>
+      <div>CSS</div>
+      <div>JavaScript</div>
+      <div>Node.js</div>
+      <div>Express.js</div>
+      <div>Java</div>
+      <div>C</div>
+      <div>Python</div>
+      <div>DSA</div>
+      <div>SQL</div>
+      <div>Git & GitHub</div>
+      <div>IoT</div>
+    </div>
+  </section>
+
+  <section id="achievements" class="achievements">
+    <h2 class="section-title">Achievements</h2>
+    <ul>
+      <li>5-star Java badge on HackerRank</li>
+      <li>Project leadership & execution for mini-projects</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+    <p><strong>Online Voting Platform</strong><br>Developed a website to organize elections online. Tech Stack: HTML, CSS, Tailwind CSS, JavaScript, Node.js, Express, PostgreSQL.<br>
+    <a href="https://online-voting-platform-0ekm.onrender.com/" target="_blank" style="color: red;">View Project</a></p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: <a href="mailto:uduthavarun968@gmail.com" style="color: red;">uduthavarun968@gmail.com</a></p>
+    <p>Phone: +91 9347764310</p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/varun-udutha-67b137265" target="_blank" style="color: red;">linkedin.com/in/varun-udutha</a></p>
+    <p>GitHub: <a href="https://github.com/Varunudutha" target="_blank" style="color: red;">github.com/Varunudutha</a></p>
+  </section>
+</body>
+</html>
