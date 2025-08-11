@@ -23,7 +23,7 @@
       justify-content: space-between;
       align-items: center;
       background-color: #0d0d1c;
-      padding: 20px 50px;
+      padding: 15px 30px;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -31,7 +31,7 @@
     nav .logo {
       color: white;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 20px;
       transition: 0.3s ease;
     }
     nav .logo span {
@@ -46,7 +46,7 @@
       list-style: none;
     }
     nav ul li {
-      margin: 0 15px;
+      margin: 0 10px;
     }
     nav ul li a {
       color: white;
@@ -58,54 +58,65 @@
       color: red;
       text-shadow: 0 0 10px red;
     }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #0d0d1c;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px 0;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+      nav ul li {
+        margin: 10px 0;
+        text-align: center;
+      }
+    }
     section {
-      padding: 60px 20px;
-      transition: 0.3s ease-in-out;
+      padding: 50px 15px;
     }
     .section-title {
       text-align: center;
-      font-size: 32px;
-      margin-bottom: 30px;
+      font-size: 28px;
+      margin-bottom: 25px;
       position: relative;
     }
     .section-title::after {
       content: '';
-      width: 60px;
+      width: 50px;
       height: 3px;
       background-color: red;
       position: absolute;
-      bottom: -10px;
+      bottom: -8px;
       left: 50%;
       transform: translateX(-50%);
-    }
-    .about, .education, .experience, .skills, .achievements, .projects, .contact {
-      max-width: 1000px;
-      margin: auto;
     }
     .about-content {
       display: flex;
       justify-content: center;
-      text-align: center;
       flex-wrap: wrap;
+      text-align: center;
     }
     .about-text {
       max-width: 700px;
-      margin: 20px;
-    }
-    .animated-about {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeSlideUp 1.2s ease-out forwards;
-      animation-delay: 0.2s;
-    }
-    @keyframes fadeSlideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      margin: 15px;
     }
     .about-text h1 {
-      font-size: 36px;
+      font-size: 28px;
       margin-bottom: 10px;
     }
     .about-text h1 span {
@@ -113,8 +124,9 @@
       text-shadow: 0 0 8px red;
     }
     .about-text p {
-      line-height: 1.7;
+      line-height: 1.6;
       color: #ccc;
+      font-size: 15px;
     }
     .skills-grid {
       display: grid;
@@ -150,21 +162,15 @@
       color: red;
       box-shadow: 0 0 15px red;
     }
-    a {
-      transition: color 0.3s, text-shadow 0.3s;
-    }
-    a:hover {
-      text-shadow: 0 0 10px red;
-    }
     ul li {
-      margin: 10px 0;
+      margin: 8px 0;
     }
     .contact-icons {
       display: flex;
       justify-content: center;
-      gap: 30px;
+      gap: 25px;
       margin-top: 20px;
-      font-size: 28px;
+      font-size: 26px;
     }
     .contact-icons a {
       color: white;
@@ -172,14 +178,29 @@
     }
     .contact-icons a:hover {
       color: red;
-      transform: scale(1.2);
+      transform: scale(1.15);
       text-shadow: 0 0 15px red;
+    }
+    @media (max-width: 480px) {
+      .about-text h1 {
+        font-size: 22px;
+      }
+      .about-text p {
+        font-size: 14px;
+      }
+      .section-title {
+        font-size: 24px;
+      }
+      nav {
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>
 <body>
   <nav>
     <div class="logo">Portfo<span>lio</span></div>
+    <i class="fas fa-bars menu-toggle"></i>
     <ul>
       <li><a href="#about">About Me</a></li>
       <li><a href="#education">Education</a></li>
@@ -193,7 +214,7 @@
 
   <section id="about" class="about">
     <div class="about-content">
-      <div class="about-text animated-about">
+      <div class="about-text">
         <h1>About Me<br><span>Hi, My name is Varun Udutha</span></h1>
         <p>
           I am a passionate B.Tech Final Year Student at MREC College, specializing in Computer Science and Engineering with IoT.
@@ -222,18 +243,9 @@
   <section id="skills" class="skills">
     <h2 class="section-title">Skills</h2>
     <div class="skills-grid">
-      <div>HTML</div>
-      <div>CSS</div>
-      <div>JavaScript</div>
-      <div>Node.js</div>
-      <div>Express.js</div>
-      <div>Java</div>
-      <div>C</div>
-      <div>Python</div>
-      <div>DSA</div>
-      <div>SQL</div>
-      <div>Git & GitHub</div>
-      <div>IoT</div>
+      <div>HTML</div><div>CSS</div><div>JavaScript</div><div>Node.js</div>
+      <div>Express.js</div><div>Java</div><div>C</div><div>Python</div>
+      <div>DSA</div><div>SQL</div><div>Git & GitHub</div><div>IoT</div>
     </div>
   </section>
 
@@ -246,28 +258,24 @@
   </section>
 
   <section id="projects" class="projects">
-  <h2 class="section-title">Projects</h2>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
-    
-    <div style="background-color: #1a1a2e; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 0 15px rgba(255,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-      <h3 style="color: red; margin-bottom: 10px;">Online Voting Platform</h3>
-      <p style="color: #ccc; font-size: 14px; line-height: 1.6;">
-        Developed a web app for online elections. Tech Stack: HTML, CSS, Tailwind CSS, JavaScript, Node.js, Express, PostgreSQL.
-      </p>
-      <a href="https://online-voting-platform-0ekm.onrender.com/" target="_blank" style="color: red; text-decoration: none; display: inline-block; margin-top: 10px;">🔗 View Project</a>
+    <h2 class="section-title">Projects</h2>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 30px;">
+      <div style="background-color: #1a1a2e; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 0 15px rgba(255,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+        <h3 style="color: red; margin-bottom: 10px;">Online Voting Platform</h3>
+        <p style="color: #ccc; font-size: 14px; line-height: 1.6;">
+          Developed a web app for online elections. Tech Stack: HTML, CSS, Tailwind CSS, JavaScript, Node.js, Express, PostgreSQL.
+        </p>
+        <a href="https://online-voting-platform-0ekm.onrender.com/" target="_blank" style="color: red; text-decoration: none; display: inline-block; margin-top: 10px;">🔗 View Project</a>
+      </div>
+      <div style="background-color: #1a1a2e; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 0 15px rgba(255,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
+        <h3 style="color: red; margin-bottom: 10px;">Movie Explorer App</h3>
+        <p style="color: #ccc; font-size: 14px; line-height: 1.6;">
+          Built a React.js app using TMDB API with filters (genre, year, sort), infinite scroll, Bootstrap UI, and dark mode. Deployed on Vercel.
+        </p>
+        <a href="https://movie-explorer-app-git-master-varun-uduthas-projects.vercel.app" target="_blank" style="color: red; text-decoration: none; display: inline-block; margin-top: 10px;">🎬 View Project</a>
+      </div>
     </div>
-
-    <div style="background-color: #1a1a2e; border-radius: 12px; padding: 20px; width: 300px; box-shadow: 0 0 15px rgba(255,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-      <h3 style="color: red; margin-bottom: 10px;">Movie Explorer App</h3>
-      <p style="color: #ccc; font-size: 14px; line-height: 1.6;">
-        Built a React.js app using TMDB API with filters (genre, year, sort), infinite scroll, Bootstrap UI, and dark mode. Deployed on Vercel.
-      </p>
-      <a href="https://movie-explorer-app-git-master-varun-uduthas-projects.vercel.app" target="_blank" style="color: red; text-decoration: none; display: inline-block; margin-top: 10px;">🎬 View Project</a>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <section id="contact" class="contact">
     <h2 class="section-title">Contact</h2>
@@ -278,5 +286,13 @@
       <a href="https://github.com/Varunudutha" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
     </div>
   </section>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("nav ul");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
